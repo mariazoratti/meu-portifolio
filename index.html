@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Maria Eduarda - Estudante e entusiasta de tecnologia, desenvolvimento web e design. Conheça meus primeiros projetos e trajetória!">
+  <meta name="keywords" content="Maria Eduarda, Portfólio, Desenvolvedora, Estudante de Tecnologia, Front-end, Web Design">
+  <meta name="author" content="Maria Eduarda">
+  
+  <title>Maria Eduarda | Portfólio Criativo</title>
+
+  <!-- Google Fonts: Syne (expressivo) e Plus Jakarta Sans (moderno e legível) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script para carregar o tema salvo sem piscar a tela (FOUC) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Elementos de iluminação decorativa de fundo -->
+  <div class="ambient-glow glow-purple" aria-hidden="true"></div>
+  <div class="ambient-glow glow-pink" aria-hidden="true"></div>
+  <div class="ambient-glow glow-orange" aria-hidden="true"></div>
+
+  <!-- Cabeçalho / Navegação -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo" id="brand-logo">
+        <span class="logo-text">Maria Eduarda</span>
+        <span class="logo-badge">tech.dev</span>
+      </a>
+
+      <!-- Navegação Principal -->
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre mim</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#contato" class="nav-link nav-link-cta">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Cabeçalho (Alternador de Tema & Menu Mobile) -->
+      <div class="header-actions">
+        <!-- Botão Alternador de Modo Claro / Escuro -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar entre modo claro e escuro" title="Alternar tema">
+          <!-- Ícone do Sol (visível no modo escuro) -->
+          <svg class="theme-icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Ícone da Lua (visível no modo claro) -->
+          <svg class="theme-icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Botão Menu Mobile -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção 1: Início / Hero -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-tag-badge">
+            <span class="sparkle">✦</span>
+            <span>Estudante de Tecnologia & Criatividade</span>
+          </div>
+
+          <h1 class="hero-title">
+            Olá, eu sou <br>
+            <span class="gradient-text">Maria Eduarda!</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Estou iniciando minha jornada no universo tech. Apaixonada por transformar ideias em experiências visuais, código limpo e soluções digitais acessíveis.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary" id="btn-hero-projetos">
+              <span>Conheça meus projetos</span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contato" class="btn btn-secondary" id="btn-hero-contato">
+              <span>Bora conversar?</span>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-dot dot-purple"></span>
+              <span>Aprendizado Contínuo</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-dot dot-pink"></span>
+              <span>Foco em Front-end</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-dot dot-orange"></span>
+              <span>Design & Usabilidade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="visual-card-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="window-title">maria-eduarda.js</span>
+            </div>
+            <div class="visual-card-body">
+              <div class="code-preview">
+                <span class="token-keyword">const</span> <span class="token-variable">estudante</span> = {<br>
+                &nbsp;&nbsp;nome: <span class="token-string">"Maria Eduarda"</span>,<br>
+                &nbsp;&nbsp;area: <span class="token-string">"Tecnologia & Web"</span>,<br>
+                &nbsp;&nbsp;fase: <span class="token-string">"Início da Jornada 🚀"</span>,<br>
+                &nbsp;&nbsp;paixoes: [<span class="token-string">"Código"</span>, <span class="token-string">"Cores"</span>, <span class="token-string">"Inovação"</span>],<br>
+                &nbsp;&nbsp;status: <span class="token-string">"Construindo o futuro..."</span><br>
+                };
+              </div>
+            </div>
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">💡</span>
+              <span class="badge-text">100% Curiosa</span>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">🎨</span>
+              <span class="badge-text">Criativa & Dedicada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Sobre mim -->
+    <section class="section about-section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Quem sou eu</div>
+          <h2 class="section-title">Construindo conhecimento, linha por linha</h2>
+          <p class="section-subtitle">
+            Um olhar criativo com determinação para aprender e evoluir a cada novo desafio.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Card de Apresentação Principal -->
+          <div class="about-card main-bio-card">
+            <div class="bio-decor-top">
+              <span class="pill-mini">Edição 2026</span>
+              <span class="pill-mini highlight">Estudante Tech</span>
+            </div>
+
+            <h3 class="bio-name">Olá! Sou Maria Eduarda.</h3>
+            
+            <p class="bio-text">
+              Estou dando os meus primeiros passos na área de tecnologia, com muito entusiasmo para desvendar como a programação e o design se conectam para criar experiências marcantes.
+            </p>
+            <p class="bio-text">
+              Como estudante, meu objetivo é absorver o máximo de conhecimento prático em desenvolvimento web, boas práticas de interface, acessibilidade e resolução criativa de problemas. Acredito que a tecnologia fica muito mais poderosa quando aliada à sensibilidade visual e à vontade genuína de aprender!
+            </p>
+
+            <div class="bio-details-grid">
+              <div class="detail-box">
+                <span class="detail-label">Nível</span>
+                <strong class="detail-value">Estudante Iniciante</strong>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Foco Atual</span>
+                <strong class="detail-value">HTML5, CSS3, JS & UI/UX</strong>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Interesse</span>
+                <strong class="detail-value">Projetos Web & Inovação</strong>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Disponibilidade</span>
+                <strong class="detail-value">Estágio / Aprendizado</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Lateral de Habilidades & Valores -->
+          <div class="about-side-cards">
+            <!-- Card de O que estou estudando -->
+            <div class="about-card side-card">
+              <div class="side-card-header">
+                <div class="icon-circle icon-purple">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h4>O que estou estudando</h4>
+              </div>
+              <div class="skills-tags">
+                <span class="tag tag-purple">HTML5 Semântico</span>
+                <span class="tag tag-pink">CSS3 & Responsividade</span>
+                <span class="tag tag-orange">Lógica de Programação</span>
+                <span class="tag tag-purple">JavaScript Moderno</span>
+                <span class="tag tag-pink">Design de Interfaces (UI)</span>
+                <span class="tag tag-orange">Git & GitHub Básico</span>
+              </div>
+            </div>
+
+            <!-- Card de Meus Valores -->
+            <div class="about-card side-card">
+              <div class="side-card-header">
+                <div class="icon-circle icon-pink">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </div>
+                <h4>Minha Motivação</h4>
+              </div>
+              <ul class="values-list">
+                <li>
+                  <strong>Curiosidade ativa:</strong> Pesquisar, testar e entender o funcionamento por trás das coisas.
+                </li>
+                <li>
+                  <strong>Dedicação diária:</strong> Cada linha de código é um avanço na minha formação.
+                </li>
+                <li>
+                  <strong>Espírito colaborativo:</strong> Aprender em comunidade e trocar experiências construtivas.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Projetos -->
+    <section class="section projects-section" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Portfólio em Construção</div>
+          <h2 class="section-title">Meus Primeiros Projetos</h2>
+          <p class="section-subtitle">
+            Aqui estão os protótipos e estudos que representam o início da minha jornada prática.
+          </p>
+          <div class="disclaimer-badge">
+            <span class="disclaimer-icon">⚠️</span>
+            <span>Espaço com <strong>conteúdo provisório</strong> para demonstração de estrutura e layout.</span>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Card de Projeto 1 -->
+          <article class="project-card project-card-purple" id="projeto-card-1">
+            <div class="card-visual">
+              <div class="project-banner banner-purple">
+                <div class="banner-badge">Conteúdo Provisório 01</div>
+                <div class="banner-illustration">
+                  <svg class="preview-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="15" width="160" height="90" rx="12" fill="rgba(255,255,255,0.25)" />
+                    <rect x="35" y="30" width="60" height="8" rx="4" fill="#FFFFFF" />
+                    <rect x="35" y="46" width="130" height="5" rx="2.5" fill="rgba(255,255,255,0.7)" />
+                    <rect x="35" y="58" width="105" height="5" rx="2.5" fill="rgba(255,255,255,0.7)" />
+                    <circle cx="150" cy="85" r="14" fill="#FFFFFF" />
+                    <path d="M145 85H155M150 80V90" stroke="#7928CA" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="status-chip">Em Desenvolvimento</span>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Aplicação Web Conceitual</div>
+              <h3 class="card-title">Dashboard Acadêmico Inteligente</h3>
+              <p class="card-description">
+                Projeto conceitual focado em auxiliar estudantes na organização de tarefas, prazos de provas e metas de estudo de forma visual e intuitiva.
+              </p>
+
+              <div class="card-tags">
+                <span class="card-tag">HTML5</span>
+                <span class="card-tag">CSS Grid</span>
+                <span class="card-tag">JavaScript</span>
+              </div>
+
+              <div class="card-footer">
+                <button class="project-btn" onclick="alert('Este é um projeto provisório de exemplo criado para o portfólio de Maria Eduarda.')">
+                  <span>Ver Detalhes</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <span class="provisional-label">Simulação</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card de Projeto 2 -->
+          <article class="project-card project-card-pink" id="projeto-card-2">
+            <div class="card-visual">
+              <div class="project-banner banner-pink">
+                <div class="banner-badge">Conteúdo Provisório 02</div>
+                <div class="banner-illustration">
+                  <svg class="preview-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="18" width="150" height="84" rx="12" fill="rgba(255,255,255,0.25)" />
+                    <circle cx="60" cy="55" r="22" fill="#FFFFFF" fill-opacity="0.9" />
+                    <rect x="95" y="42" width="65" height="7" rx="3.5" fill="#FFFFFF" />
+                    <rect x="95" y="56" width="50" height="6" rx="3" fill="rgba(255,255,255,0.8)" />
+                    <rect x="95" y="68" width="35" height="6" rx="3" fill="rgba(255,255,255,0.6)" />
+                  </svg>
+                </div>
+                <span class="status-chip">Em Desenvolvimento</span>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Interface & Design</div>
+              <h3 class="card-title">EcoRastro: Conscientização Verde</h3>
+              <p class="card-description">
+                Página interativa com cálculo simbólico de pegada de carbono diária e dicas sustentáveis, desenhada com identidade visual leve e amigável.
+              </p>
+
+              <div class="card-tags">
+                <span class="card-tag">CSS Flexbox</span>
+                <span class="card-tag">UI Design</span>
+                <span class="card-tag">Acessibilidade</span>
+              </div>
+
+              <div class="card-footer">
+                <button class="project-btn" onclick="alert('Este é um projeto provisório de exemplo criado para o portfólio de Maria Eduarda.')">
+                  <span>Ver Detalhes</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <span class="provisional-label">Simulação</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card de Projeto 3 -->
+          <article class="project-card project-card-orange" id="projeto-card-3">
+            <div class="card-visual">
+              <div class="project-banner banner-orange">
+                <div class="banner-badge">Conteúdo Provisório 03</div>
+                <div class="banner-illustration">
+                  <svg class="preview-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="20" width="140" height="80" rx="10" fill="rgba(255,255,255,0.25)" />
+                    <rect x="45" y="35" width="40" height="35" rx="8" fill="#FFFFFF" />
+                    <rect x="95" y="38" width="60" height="6" rx="3" fill="#FFFFFF" />
+                    <rect x="95" y="50" width="48" height="6" rx="3" fill="rgba(255,255,255,0.8)" />
+                    <rect x="45" y="78" width="110" height="10" rx="5" fill="rgba(255,255,255,0.9)" />
+                  </svg>
+                </div>
+                <span class="status-chip">Em Desenvolvimento</span>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Landing Page Criativa</div>
+              <h3 class="card-title">Café & Código: Espaço Co-working</h3>
+              <p class="card-description">
+                Site fictício para uma cafeteria voltada a estudantes e programadores, explorando temas modernos, animações suaves e cardápio interativo.
+              </p>
+
+              <div class="card-tags">
+                <span class="card-tag">HTML Semântico</span>
+                <span class="card-tag">CSS Animations</span>
+                <span class="card-tag">Responsivo</span>
+              </div>
+
+              <div class="card-footer">
+                <button class="project-btn" onclick="alert('Este é um projeto provisório de exemplo criado para o portfólio de Maria Eduarda.')">
+                  <span>Ver Detalhes</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <span class="provisional-label">Simulação</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Contato -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Coluna Esquerda: Informações e Convite -->
+          <div class="contact-info">
+            <div class="section-tag">Conecte-se comigo</div>
+            <h2 class="contact-title">
+              Vamos construir algo <span class="gradient-text">incrível juntos?</span>
+            </h2>
+            <p class="contact-subtitle">
+              Seja para tirar dúvidas, compartilhar dicas de estudo, propor uma oportunidade de estágio ou apenas bater um papo sobre tecnologia, fique à vontade para me enviar uma mensagem!
+            </p>
+
+            <div class="contact-perks">
+              <div class="perk-item">
+                <div class="perk-icon perk-purple">📬</div>
+                <div>
+                  <strong>Mensagem Direta</strong>
+                  <p>Responderei o quanto antes pelo meu e-mail.</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <div class="perk-icon perk-pink">🌱</div>
+                <div>
+                  <strong>Aberta a Oportunidades</strong>
+                  <p>Em busca de aprendizado prático e colaboração.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-channels">
+              <span class="channels-title">Canais de Contato:</span>
+              <div class="channel-pills">
+                <a href="mailto:mariaeduarda@exemplo.com" class="channel-pill" title="Enviar e-mail">
+                  <span>✉️ mariaeduarda@exemplo.com</span>
+                </a>
+                <span class="channel-pill">
+                  <span>📍 Brasil</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Formulário Visual Moderno -->
+          <div class="contact-form-card">
+            <div class="form-card-header">
+              <h3>Envie sua mensagem</h3>
+              <p>Preencha os campos abaixo para entrar em contato.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="nome" class="form-label">Seu Nome</label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="nome" 
+                    name="nome" 
+                    class="form-input" 
+                    placeholder="Ex: Ana Silva" 
+                    required 
+                    autocomplete="name"
+                  >
+                  <span class="input-icon">👤</span>
+                </div>
+                <span class="field-error" id="error-nome"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Seu E-mail</label>
+                <div class="input-wrapper">
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="Ex: ana@exemplo.com" 
+                    required 
+                    autocomplete="email"
+                  >
+                  <span class="input-icon">✉️</span>
+                </div>
+                <span class="field-error" id="error-email"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem" class="form-label">Sua Mensagem</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <textarea 
+                    id="mensagem" 
+                    name="mensagem" 
+                    class="form-textarea" 
+                    rows="4" 
+                    placeholder="Escreva sua mensagem, sugestão ou oportunidade..." 
+                    required
+                  ></textarea>
+                </div>
+                <span class="field-error" id="error-mensagem"></span>
+              </div>
+
+              <button type="submit" class="btn btn-submit" id="btn-submit">
+                <span>Enviar Mensagem</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">Maria Eduarda</span>
+          <p class="footer-tagline">
+            Portfólio pessoal e espaço de aprendizado contínuo em tecnologia.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navegação secundária">
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Maria Eduarda. Todos os direitos reservados.
+        </p>
+        <div class="footer-badge">
+          Criado com foco, criatividade &amp; código 💜
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
